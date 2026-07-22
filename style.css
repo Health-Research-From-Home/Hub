@@ -133,22 +133,6 @@ main {
     padding: 0;
 }
 
-.intro {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: left;
-}
-
-.intro h2{
-    color: #0297A7;
-}
-
-.intro img {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-}
 
 .cards {
     display: grid;
@@ -175,12 +159,6 @@ main {
     flex-grow: 1;
 }
 
-.card button {
-    margin-top: auto;
-    align-self: center;
-     padding: 10px 20px;
-}
-
 
 .card ul{
     text-align: left;
@@ -197,21 +175,18 @@ main {
     padding: 15px;
 }
 
-button {
-    font-family: inherit;
-}
-
-button {
-    font-family: inherit;
+.card-button {
+    margin-top: auto;
+    align-self: center;
+    padding: 10px 20px;
     background-color: #0297A7;
     color: white;
-    border: none;
-    padding: 10px 0px;
     border-radius: 5px;
-    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
 }
 
-button:hover {
+.card-button:hover {
     opacity: 0.8;
 }
 
@@ -227,9 +202,10 @@ button:hover {
 .category {
     display: flex;
     align-items: center;
-    background-color: #f2f2f2;
+    background-color: #0297A7;
     padding: 40px;
     gap: 40px;
+    color: white
 }
 
 .category-image {
@@ -258,8 +234,8 @@ button:hover {
     padding: 10px 25px;
     border: none;
     border-radius: 5px;
-    background-color: #0297A7;
-    color: white;
+    background-color: white;
+    color: #0297A7;
     cursor: pointer;
 }
 
@@ -267,3 +243,78 @@ button:hover {
     opacity: 0.8;
 }
 
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-column a {
+    color: #0297A7;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+.footer-column h3 {
+    margin-top: 0;
+}
+
+.footer-column p {
+    margin: 8px 0;
+}
+
+
+.footer-links {
+    border-top: 1px solid #777;
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #0297A7;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .footer-columns {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 40px;
+    gap: 40px;
+}
+
+.intro-image {
+    flex: 1;
+}
+
+.intro-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-text h2{
+    flex: 1;
+    color: #0297A7;
+}
