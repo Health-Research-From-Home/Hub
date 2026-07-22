@@ -400,6 +400,177 @@ footer {
     margin: 20px 0;
 }
 
+.interactive-image {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 20px 0;
+}
+
+.interactive-image .content-image {
+    margin: 0;
+}
+
+.image-hotspot {
+    position: absolute;
+    z-index: 1;
+    color: #1b1b1b;
+    text-decoration: none;
+}
+
+.image-hotspot:hover,
+.image-hotspot:focus,
+.image-hotspot:focus-visible {
+    z-index: 10;
+}
+
+.hotspot-planning {
+    left: 46%;
+    top: 50%;
+}
+
+.hotspot-perspectives {
+    left: 59%;
+    top: 32%;
+}
+
+.hotspot-impact {
+    left: 74%;
+    top: 35%;
+}
+
+.hotspot-marker {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 4px solid white;
+    border-radius: 50%;
+    background: rgba(2, 151, 167, 0.72);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.hotspot-marker::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    animation: hotspot-pulse 2s infinite;
+}
+
+.hotspot-card {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: calc(100% + 13px);
+    width: 220px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+    font-size: 0.84rem;
+    line-height: 1.45;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, 8px);
+    transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+}
+
+.hotspot-card::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    border: 8px solid transparent;
+    border-top-color: white;
+    transform: translateX(-50%);
+}
+
+.hotspot-card strong,
+.hotspot-link {
+    display: block;
+}
+
+.hotspot-card strong {
+    margin-bottom: 4px;
+    color: #007A87;
+    font-size: 0.95rem;
+}
+
+.hotspot-link {
+    margin-top: 8px;
+    color: #007A87;
+    font-weight: 700;
+}
+
+.image-hotspot:hover .hotspot-card,
+.image-hotspot:focus .hotspot-card,
+.image-hotspot:focus-visible .hotspot-card {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.image-hotspot:hover .hotspot-marker,
+.image-hotspot:focus .hotspot-marker {
+    background: rgba(107, 44, 145, 0.82);
+    transform: scale(1.14);
+}
+
+.image-hotspot:focus-visible {
+    outline: 3px solid #ffcc33;
+    outline-offset: 5px;
+    border-radius: 50%;
+}
+
+@keyframes hotspot-pulse {
+    0%, 100% { transform: scale(0.8); opacity: 0; }
+    45% { opacity: 0.8; }
+    80% { transform: scale(1.35); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hotspot-marker::after {
+        animation: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .hotspot-card {
+        width: min(190px, 55vw);
+        padding: 10px 12px;
+        font-size: 0.75rem;
+    }
+
+    .hotspot-card-right {
+        right: -8px;
+        left: auto;
+        transform: translate(0, 8px);
+    }
+
+    .hotspot-card-right::after {
+        right: 12px;
+        left: auto;
+        transform: none;
+    }
+
+    .image-hotspot:hover .hotspot-card-right,
+    .image-hotspot:focus .hotspot-card-right,
+    .image-hotspot:focus-visible .hotspot-card-right {
+        transform: translate(0, 0);
+    }
+
+    .hotspot-marker {
+        width: 16px;
+        height: 16px;
+        border-width: 3px;
+    }
+}
+
 #PPIE-text h2 {
     color: #0297A7;
     font-size: 2rem;
