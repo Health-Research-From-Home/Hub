@@ -516,6 +516,54 @@ footer {
     text-decoration: none;
 }
 
+/* Social icons */
+
+.social-icons {
+
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 25px;
+
+}
+
+
+.social-icons a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #0297A7;
+
+    color: white;
+
+    font-size: 20px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+
+}
+
+
+.social-icons a:hover {
+
+    background: #007A87;
+
+    transform: translateY(-3px);
+
+}
+
 @media (max-width: 700px) {
     .footer-columns {
         grid-template-columns: 1fr;
