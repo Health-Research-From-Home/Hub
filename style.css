@@ -34,6 +34,25 @@ body {
     padding: 20px 40px;
 }
 
+/* makes the header and logo area mobile responsive */
+
+@media (max-width: 768px) {
+
+    .logo-title {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .logo-title h1 {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+}
+
 nav {
     background-color: #0297A7;
     position: relative;
@@ -124,6 +143,33 @@ body, html {
   transform: translate(-50%, -50%);
   color: white;
 }
+
+/* makes hero bit optimised for mobile */
+
+@media (max-width: 768px) {
+
+    .hero-image {
+        height: 40vh;
+        min-height: 280px;
+    }
+
+    .hero-text {
+        width: 90%;
+        max-width: 500px;
+        padding: 0 20px;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+}
+
 header {
     margin: 0;
     padding: 0;
@@ -169,6 +215,23 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 40px;
+}
+
+/* mobile and tablet responsive */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
 }
 
 .card {
@@ -390,6 +453,27 @@ footer {
 
 .sidebar a:hover {
     text-decoration: underline;
+}
+
+/* makes the two columns mobile accessible */
+
+@media (max-width: 768px) {
+
+    .page-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;   /* Stops the sticky behaviour on mobile */
+        padding: 20px;
+    }
+
+    .content {
+        padding-top: 0;
+    }
+
 }
 
 .content-image {

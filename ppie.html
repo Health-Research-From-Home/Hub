@@ -79,7 +79,7 @@
         <div class="hero-image">
             <div class="hero-text">
                 <h2>PPIE Resources</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </div>
 
@@ -158,43 +158,6 @@
     </ul>
 </div>
 
-<section class="ppie-image-and-text">
-    <button class="carousel-arrow prev" onclick="changeVideo(-1)">
-        &#10094;
-    </button>
-
-
-    <div class="ppie-video">
-        <div class="video-slide active">
-            <iframe 
-                src="https://www.youtube.com/embed/w8VZLBjD2kw"
-                title="Research video"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-        <div class="video-slide">
-            <iframe 
-                src="https://www.youtube.com/embed/3BJJ30AziPw"
-                title="Research video"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-
-
-    <div class="ppie-image-and-text-text">
-        <h2>Featured videos</h2>
-        <p>Watch our videos explaining different aspects of patient and public 
-            involvement and engagement. </p>
-    </div>
-    <button class="carousel-arrow next" onclick="changeVideo(1)">
-        &#10095;
-    </button>
-
-</section>
-
-</div>
 
 </main>
 
@@ -239,29 +202,12 @@
             <a href="https://sites.manchester.ac.uk/health-research-from-home/accessibility.php">Accessibility</a> |
             <a href="https://www.manchester.ac.uk/about/privacy-information/freedom-information/">Fredom of information</a> |
             <a href="https://www.manchester.ac.uk/about/governance/charitable-status/">Charitable status</a> |
-            <p>Royal Charter Number: RC000797</p>|
+            <p>Royal Charter Number: RC000797</p>
         </p>
     </div>
 
 </footer>
 
-function changeVideo(direction) {
-
-    videos[currentVideo].classList.remove("active");
-
-    currentVideo += direction;
-
-    if (currentVideo >= videos.length) {
-        currentVideo = 0;
-    }
-
-    if (currentVideo < 0) {
-        currentVideo = videos.length - 1;
-    }
-
-    videos[currentVideo].classList.add("active");
-
-}
 
 </body>
 </html>>
