@@ -1141,24 +1141,13 @@ footer {
 
 
 
-@media (max-width:600px) {
-
-    .video-resources::after {
-
-        content:"Swipe to view more videos →";
-
-        display:block;
-
-        text-align:center;
-
-        margin-top:15px;
-
-        color:#007A87;
-
-        font-size:.9rem;
-
-    }
-
+.video-resources::after {
+    content: "Swipe to view more videos →";
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #007A87;
+    font-size: .9rem;
 }
 
 /* =================================
